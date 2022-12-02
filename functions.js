@@ -147,12 +147,12 @@ document.getElementById("igual").addEventListener("click", igualValue);
 
 function unoValue() {
   resultado += document.getElementById("uno").textContent;
-  console.log(resultado);
+  console.log("resultado es: " + resultado);
 }
 
 function dosValue() {
   resultado += document.getElementById("dos").textContent;
-  console.log(resultado);
+  console.log("resultado es: " + resultado);
 }
 
 function restaValue() {
@@ -167,6 +167,11 @@ function igualValue() {
   let total = Number(primerosNumeros) + tipoOperacion + Number(resultado);
   console.log(total);
   console.log(tipoOperacion);
+
+  switch (tipoOperacion )
+
+
+
   clearResultado();
 }
 
