@@ -1,180 +1,164 @@
-// let operandoa;
-// let operandob;
-// let operacion;
-
-// function init() {
-//   //variables
-//   let resultado = document.getElementById("resultado");
-//   let nueve = document.getElementById("nueve");
-//   let ocho = document.getElementById("ocho");
-//   let siete = document.getElementById("siete");
-//   let seis = document.getElementById("seis");
-//   let cinco = document.getElementById("cinco");
-//   let cuatro = document.getElementById("cuatro");
-//   let tres = document.getElementById("tres");
-//   let dos = document.getElementById("dos");
-//   let uno = document.getElementById("uno");
-//   let cero = document.getElementById("cero");
-//   let resta = document.getElementById("resta");
-//   let suma = document.getElementById("suma");
-//   let division = document.getElementById("division");
-//   let multiplicacion = document.getElementById("multiplicacion");
-//   let igual = document.getElementById("igual");
-//   let reset = document.getElementById("reset");
-
-//   //eventos
-//   uno.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "1";
-//   };
-//   dos.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "2";
-//   };
-//   tres.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "3";
-//   };
-//   cuatro.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "4";
-//   };
-//   cinco.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "5";
-//   };
-//   seis.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "6";
-//   };
-//   siete.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "7";
-//   };
-//   ocho.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "8";
-//   };
-//   nueve.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "9";
-//   };
-//   cero.onclick = function (e) {
-//     resultado.textContent = resultado.textContent + "0";
-//   };
-
-//   reset.onclick = function (e) {
-//     resetear();
-//   };
-
-//   resta.onclick = function (e) {
-//     operandoa = resultado.textContent;
-//     operacion = "-";
-//     limpiar();
-//   };
-//   suma.onclick = function (e) {
-//     operandoa = resultado.textContent;
-//     operacion = "+";
-//     limpiar();
-//   };
-//   division.onclick = function (e) {
-//     operandoa = resultado.textContent;
-//     operacion = "/";
-//     limpiar();
-//   };
-//   multiplicacion.onclick = function (e) {
-//     operandoa = resultado.textContent;
-//     operacion = "*";
-//     limpiar();
-//   };
-
-//   igual.onclick = function (e) {
-//     operandob = resultado.textContent;
-//     resolver();
-//   };
-// }
-
-// function limpiar() {
-//   resultado.textContent = "";
-// }
-
-// function resetear() {
-//   resultado.textContent = "";
-//   operandoa = 0;
-//   operandob = 0;
-//   operacion = "";
-// }
-
-// function resolver() {
-//   let res = 0;
-//   switch (operacion) {
-//     case "+":
-//       res = parseFloat(operandoa) + parseFloat(operandob);
-//       break;
-//     case "-":
-//       res = parseFloat(operandoa) - parseFloat(operandob);
-//       break;
-//     case "/":
-//       res = parseFloat(operandoa) / parseFloat(operandob);
-//       break;
-//     case "*":
-//       res = parseFloat(operandoa) * parseFloat(operandob);
-//       break;
-//   }
-//   resetear();
-//   resultado.textContent = res;
-// }
-
-// let resultado = document.getElementById("resultado");
-// let nueve = document.getElementById("nueve");
-// let ocho = document.getElementById("ocho");
-// let siete = document.getElementById("siete");
-// let seis = document.getElementById("seis");
-// let cinco = document.getElementById("cinco");
-// let cuatro = document.getElementById("cuatro");
-// let tres = document.getElementById("tres");
-// let dos = document.getElementById("dos");
-// let uno = document.getElementById("uno");
-// let cero = document.getElementById("cero");
-// let resta = document.getElementById("resta");
-// let suma = document.getElementById("suma");
-// let division = document.getElementById("division");
-// let multiplicacion = document.getElementById("multiplicacion");
-// let igual = document.getElementById("igual");
-// let reset = document.getElementById("reset");
-// let numEscrito = [];
-
-let resultado = 0;
-let primerosNumeros = 0;
-let segundosNumeros = 0;
+let resultado = "";
+let primerosNumeros = "";
 let tipoOperacion;
+let total = "";
 
 document.getElementById("uno").addEventListener("click", unoValue);
 document.getElementById("dos").addEventListener("click", dosValue);
+document.getElementById("tres").addEventListener("click", tresValue);
+document.getElementById("cuatro").addEventListener("click", cuatroValue);
+document.getElementById("cinco").addEventListener("click", cincoValue);
+document.getElementById("seis").addEventListener("click", seisValue);
+document.getElementById("siete").addEventListener("click", sieteValue);
+document.getElementById("ocho").addEventListener("click", ochoValue);
+document.getElementById("nueve").addEventListener("click", nueveValue);
+document.getElementById("cero").addEventListener("click", ceroValue);
 document.getElementById("resta").addEventListener("click", restaValue);
+document.getElementById("suma").addEventListener("click", sumaValue);
+document.getElementById("multiplicacion").addEventListener("click", multiValue);
+document.getElementById("division").addEventListener("click", diviValue);
 document.getElementById("igual").addEventListener("click", igualValue);
+document.getElementById("reset").addEventListener("click", resetValue);
 
 function unoValue() {
   resultado += document.getElementById("uno").textContent;
-  console.log("resultado es: " + resultado);
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
 }
 
 function dosValue() {
   resultado += document.getElementById("dos").textContent;
-  console.log("resultado es: " + resultado);
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
 }
 
+function tresValue() {
+  resultado += document.getElementById("tres").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+function cuatroValue() {
+  resultado += document.getElementById("cuatro").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+function cincoValue() {
+  resultado += document.getElementById("cinco").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+function seisValue() {
+  resultado += document.getElementById("seis").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+function sieteValue() {
+  resultado += document.getElementById("siete").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+function ochoValue() {
+  resultado += document.getElementById("ocho").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+function nueveValue() {
+  resultado += document.getElementById("nueve").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+function ceroValue() {
+  resultado += document.getElementById("cero").textContent;
+  checkLength();
+  document.getElementById("resultado").innerHTML = resultado;
+}
+
+// al clicar en una operación se guarda en una variable el resultado que ibamos teniendo
+// limpiamos el la variable resultado dejándola a 0
+// y le asignamos el tipo de operación para enviarla al clicar =
 function restaValue() {
   primerosNumeros = resultado;
-  console.log("los primeros num: " + primerosNumeros);
   clearResultado();
-  console.log("ahora el resultado es: " + resultado);
   tipoOperacion = "-";
+  document.getElementById("resultado").innerHTML = tipoOperacion;
+}
+
+function sumaValue() {
+  primerosNumeros = resultado;
+  clearResultado();
+  tipoOperacion = "+";
+  document.getElementById("resultado").innerHTML = tipoOperacion;
+}
+
+function multiValue() {
+  primerosNumeros = resultado;
+  clearResultado();
+  tipoOperacion = "*";
+  document.getElementById("resultado").innerHTML = tipoOperacion;
+}
+
+function diviValue() {
+  primerosNumeros = resultado;
+  clearResultado();
+  tipoOperacion = "/";
+  document.getElementById("resultado").innerHTML = tipoOperacion;
+}
+
+function resetValue() {
+  clearPrimerosNumeros();
+  clearResultado();
+  document.getElementById("resultado").innerHTML = 0;
 }
 
 function igualValue() {
-  let total = Number(primerosNumeros) + tipoOperacion + Number(resultado);
-  console.log(total);
-  console.log(tipoOperacion);
-
-  switch (tipoOperacion )
-
-
-
-  clearResultado();
+  switch (tipoOperacion) {
+    case "-":
+      total = Number(primerosNumeros) - Number(resultado);
+      document.getElementById("resultado").innerHTML = total;
+      clearResultado();
+      clearPrimerosNumeros();
+      break;
+    case "+":
+      total = Number(primerosNumeros) + Number(resultado);
+      document.getElementById("resultado").innerHTML = total;
+      clearResultado();
+      clearPrimerosNumeros();
+      break;
+    case "*":
+      total = Number(primerosNumeros) * Number(resultado);
+      document.getElementById("resultado").innerHTML = total;
+      clearResultado();
+      clearPrimerosNumeros();
+      break;
+    case "/":
+      total = Number(primerosNumeros) / Number(resultado);
+      document.getElementById("resultado").innerHTML = total;
+      clearResultado();
+      clearPrimerosNumeros();
+      break;
+  }
 }
 
 function clearResultado() {
-  resultado = 0;
+  resultado = "";
+}
+function clearPrimerosNumeros() {
+  primerosNumeros = "";
+}
+
+function checkLength() {
+  Number(resultado);
+  if (resultado > 999999999) {
+    alert("max 9 digits");
+    clearResultado();
+    clearPrimerosNumeros();
+  } else {
+  }
 }

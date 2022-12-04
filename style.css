@@ -2,10 +2,12 @@
   display: block;
   margin: 15% auto;
   padding: 20px;
-  background-color: rgb(32, 82, 71);
+  background-color: rgb(172, 116, 47);
   width: 300px;
-  height: 500px;
-  border-radius: 25px;
+  height: 420px;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 30px;
 }
 
 .calculadora td button {
@@ -13,29 +15,24 @@
   width: 60px;
   height: 50px;
   font-size: 25px;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.calculadora td button:hover {
+  background-color: rgb(242, 201, 148);
 }
 
 #resultado {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: right;
+  align-items: center;
   font-size: 40px;
-  margin-bottom: 5px;
+  margin-bottom: 45px;
   margin-top: 15px;
   width: 250px;
-  height: 100px;
+  height: 70px;
   background-color: white;
-  border-radius: 20px;
-}
-
-#input_operacion {
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 25px;
-  margin-top: 5px;
-  width: 250px;
-  height: 50px;
-  background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding-right: 5px;
 }
